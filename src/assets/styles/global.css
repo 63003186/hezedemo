@@ -1,0 +1,198 @@
+/* src/assets/styles/global.css */
+
+/* ====== 全局变量 ====== */
+:root {
+  /* 主题色 - 菏泽牡丹 & 非遗文化 */
+  --color-primary: #d2691e;       /* 巧克力棕（导航/主按钮） */
+  --color-primary-light: #e08a4e;
+  --color-primary-dark: #a0522d;
+
+  --color-accent: #c71585;        /* 牡丹红（点缀） */
+  --color-success: #28a745;
+  --color-danger: #dc3545;
+
+  /* 中性色 */
+  --color-text: #333;
+  --color-text-light: #666;
+  --color-border: #ddd;
+  --color-background: #fff;
+  --color-bg-light: #f9f9f9;
+
+  /* 字体 */
+  --font-family-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* ====== 全局重置与基础样式 ====== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family-sans);
+  background-color: var(--color-bg-light);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* ====== 按钮系统 ====== */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: white;
+}
+.btn-primary:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(210, 105, 30, 0.3);
+}
+
+.btn-outline {
+  border: 2px solid var(--color-primary);
+  color: var(--color-primary);
+  background: transparent;
+}
+.btn-outline:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.btn-danger {
+  background-color: var(--color-danger);
+  color: white;
+}
+.btn-danger:hover {
+  opacity: 0.9;
+}
+
+/* ====== 卡片通用样式 ====== */
+.card {
+  background: var(--color-background);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+.card:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* ====== 表单控件 ====== */
+input[type="number"],
+input[type="text"],
+select {
+  padding: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 1rem;
+}
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(210, 105, 30, 0.2);
+}
+
+/* ====== 响应式间距工具（可选但推荐） ====== */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.text-center { text-align: center; }
+
+/* ====== 移动端优化 ====== */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.25rem; /* 增大点击区域 */
+    min-height: 44px; /* 符合 Apple HIG 触摸标准 */
+    font-size: 1.05rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  /* 商品卡片：单列显示 */
+  .products-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem;
+  }
+
+  /* 购物车商品项：垂直堆叠 */
+  .cart-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+
+  .item-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .quantity-input,
+  .item-total,
+  .remove-btn {
+    align-self: flex-end;
+    margin-top: 0.5rem;
+  }
+
+  .cart-summary {
+    text-align: center !important;
+  }
+
+  .total-price {
+    font-size: 1.2rem;
+  }
+
+  /* 轮播图：全宽 + 适中高度 */
+  .carousel-container {
+    width: 95vw !important;
+    height: 300px !important;
+    margin: 1.5rem auto !important;
+  }
+
+  .hero {
+    padding: 0 1rem;
+  }
+
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+
+  .browse-btn {
+    font-size: 1.2rem !important;
+  }
+}

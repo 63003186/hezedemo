@@ -25,20 +25,20 @@ const cartStore = useCartStore()
 
 const products = ref([
   // 武墩墩系列
-  { id: 'wudun1', name: '武墩墩·侠客版', price: 88, image: '/images/武墩墩1.png' },
-  { id: 'wudun2', name: '武墩墩·将军版', price: 92, image: '/images/武墩墩2.png' },
-  { id: 'wudun3', name: '武墩墩·书生版', price: 85, image: '/images/武墩墩3.png' },
-  { id: 'wudun4', name: '武墩墩·镖师版', price: 90, image: '/images/武墩墩4.png' },
-  { id: 'wudun5', name: '武墩墩·隐士版', price: 87, image: '/images/武墩墩5.png' },
-  { id: 'wudun6', name: '武墩墩·宗师版', price: 95, image: '/images/武墩墩6.png' },
+  { id: 'wudun1', name: '武墩墩·侠客版', price: 88, image: '/images/wu1.png' },
+  { id: 'wudun2', name: '武墩墩·将军版', price: 92, image: '/images/wu2.png' },
+  { id: 'wudun3', name: '武墩墩·书生版', price: 85, image: '/images/wu3.png' },
+  { id: 'wudun4', name: '武墩墩·镖师版', price: 90, image: '/images/wu4.png' },
+  { id: 'wudun5', name: '武墩墩·隐士版', price: 87, image: '/images/wu5.png' },
+  { id: 'wudun6', name: '武墩墩·宗师版', price: 95, image: '/images/wu6.png' },
 
   // 丹怼怼系列
-  { id: 'dandui1', name: '丹怼怼·牡丹仙子', price: 78, image: '/images/丹怼怼1.png' },
-  { id: 'dandui2', name: '丹怼怼·花神使者', price: 82, image: '/images/丹怼怼2.png' },
-  { id: 'dandui3', name: '丹怼怼·国色天香', price: 80, image: '/images/丹怼怼3.png' },
-  { id: 'dandui4', name: '丹怼怼·富贵吉祥', price: 85, image: '/images/丹怼怼4.png' },
-  { id: 'dandui5', name: '丹怼怼·花开盛世', price: 79, image: '/images/丹怼怼5.png' },
-  { id: 'dandui6', name: '丹怼怼·曹州芳华', price: 83, image: '/images/丹怼怼6.png' }
+  { id: 'dandui1', name: '丹怼怼·牡丹仙子', price: 78, image: '/images/dan1.png' },
+  { id: 'dandui2', name: '丹怼怼·花神使者', price: 82, image: '/images/dan2.png' },
+  { id: 'dandui3', name: '丹怼怼·国色天香', price: 80, image: '/images/dan3.png' },
+  { id: 'dandui4', name: '丹怼怼·富贵吉祥', price: 85, image: '/images/dan4.png' },
+  { id: 'dandui5', name: '丹怼怼·花开盛世', price: 79, image: '/images/dan5.png' },
+  { id: 'dandui6', name: '丹怼怼·曹州芳华', price: 83, image: '/images/dan6.png' }
 ])
 
 function handleAddToCart(product) {

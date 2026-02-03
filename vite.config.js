@@ -7,7 +7,7 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 // https://vite.dev/config/
 export default defineConfig({
   // 👇 关键：改成你的仓库名！
-  base: '/Hezedemo/',
+  base: '/hezedemo/',
 
   plugins: [
     vue(),

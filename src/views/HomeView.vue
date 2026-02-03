@@ -55,18 +55,18 @@ const cartStore = useCartStore()
 const cartTotal = computed(() => cartStore.totalItems)
 
 const slides = [
-  { src: '/images/丹怼怼1.png', alt: '丹怼怼1' },
-  { src: '/images/丹怼怼2.png', alt: '丹怼怼2' },
-  { src: '/images/丹怼怼3.png', alt: '丹怼怼3' },
-  { src: '/images/丹怼怼4.png', alt: '丹怼怼4' },
-  { src: '/images/丹怼怼5.png', alt: '丹怼怼5' },
-  { src: '/images/丹怼怼6.png', alt: '丹怼怼6' },
-  { src: '/images/武墩墩1.png', alt: '武墩墩1' },
-  { src: '/images/武墩墩2.png', alt: '武墩墩2' },
-  { src: '/images/武墩墩3.png', alt: '武墩墩3' },
-  { src: '/images/武墩墩4.png', alt: '武墩墩4' },
-  { src: '/images/武墩墩5.png', alt: '武墩墩5' },
-  { src: '/images/武墩墩6.png', alt: '武墩墩6' }
+  { src: '/images/dan1.png', alt: '丹怼怼1' },
+  { src: '/images/dan2.png', alt: '丹怼怼2' },
+  { src: '/images/dan3.png', alt: '丹怼怼3' },
+  { src: '/images/dan4.png', alt: '丹怼怼4' },
+  { src: '/images/dan5.png', alt: '丹怼怼5' },
+  { src: '/images/dan6.png', alt: '丹怼怼6' },
+  { src: '/images/wu1.png', alt: '武墩墩1' },
+  { src: '/images/wu2.png', alt: '武墩墩2' },
+  { src: '/images/wu3.png', alt: '武墩墩3' },
+  { src: '/images/wu4.png', alt: '武墩墩4' },
+  { src: '/images/wu5.png', alt: '武墩墩5' },
+  { src: '/images/wu6.png', alt: '武墩墩6' }
 ]
 
 const totalSlides = slides.length

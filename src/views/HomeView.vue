@@ -1,9 +1,36 @@
 <template>
   <div class="home-view">
+    <!-- 英雄区域 -->
     <div class="hero">
-      <h1>欢迎来到菏泽文创馆</h1>
-      <p>这里汇聚了菏泽最具代表性的非物质文化遗产与创意产品：</p>
-      <router-link to="/products" class="browse-btn">浏览商品</router-link>
+      <div class="hero-content">
+        <h1 class="hero-title">欢迎来到菏泽文创馆</h1>
+        <p class="hero-subtitle">这里汇聚了菏泽最具代表性的非物质文化遗产与创意产品</p>
+        <router-link to="/products" class="browse-btn btn btn-primary">浏览商品</router-link>
+      </div>
+    </div>
+
+    <!-- 特色介绍 -->
+    <div class="features-section">
+      <div class="container">
+        <h2 class="section-title">特色产品</h2>
+        <div class="features-grid">
+          <div class="feature-item">
+            <div class="feature-icon">🎨</div>
+            <h3>非物质文化遗产</h3>
+            <p>传承千年的工艺，展现菏泽独特的文化魅力</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">✨</div>
+            <h3>创意设计</h3>
+            <p>融合传统与现代，打造独特的文创产品</p>
+          </div>
+          <div class="feature-item">
+            <div class="feature-icon">🏆</div>
+            <h3>品质保证</h3>
+            <p>严格的质量控制，确保每一件产品都是精品</p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- 轮播图容器 -->
@@ -14,7 +41,11 @@
       role="region"
       aria-label="商品轮播图"
     >
-      <button @click="prevSlide" class="carousel-arrow left" aria-label="上一张">❮</button>
+      <button @click="prevSlide" class="carousel-arrow left" aria-label="上一张">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
 
       <div class="carousel">
         <img
@@ -27,7 +58,11 @@
         />
       </div>
 
-      <button @click="nextSlide" class="carousel-arrow right" aria-label="下一张">❯</button>
+      <button @click="nextSlide" class="carousel-arrow right" aria-label="下一张">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
 
       <div class="carousel-dots" role="tablist">
         <button
@@ -40,6 +75,39 @@
           :aria-label="`跳转到第 ${index + 1} 张图片`"
           role="tab"
         ></button>
+      </div>
+    </div>
+
+    <!-- 客户评价 -->
+    <div class="testimonials-section">
+      <div class="container">
+        <h2 class="section-title">客户评价</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-item">
+            <div class="testimonial-content">
+              <p class="testimonial-text">产品质量非常好，设计独特，很有菏泽特色，送给朋友作为礼物非常合适。</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">用户1</div>
+                <div class="author-info">
+                  <h4 class="author-name">张先生</h4>
+                  <div class="author-rating">⭐⭐⭐⭐⭐</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-item">
+            <div class="testimonial-content">
+              <p class="testimonial-text">客服态度很好，物流也很快，收到的商品和图片描述一致，非常满意。</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">用户2</div>
+                <div class="author-info">
+                  <h4 class="author-name">李女士</h4>
+                  <div class="author-rating">⭐⭐⭐⭐⭐</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -55,18 +123,18 @@ const cartStore = useCartStore()
 const cartTotal = computed(() => cartStore.totalItems)
 
 const slides = [
-  { src: '/images/dan1.png', alt: '丹怼怼1' },
-  { src: '/images/dan2.png', alt: '丹怼怼2' },
-  { src: '/images/dan3.png', alt: '丹怼怼3' },
-  { src: '/images/dan4.png', alt: '丹怼怼4' },
-  { src: '/images/dan5.png', alt: '丹怼怼5' },
-  { src: '/images/dan6.png', alt: '丹怼怼6' },
-  { src: '/images/wu1.png', alt: '武墩墩1' },
-  { src: '/images/wu2.png', alt: '武墩墩2' },
-  { src: '/images/wu3.png', alt: '武墩墩3' },
-  { src: '/images/wu4.png', alt: '武墩墩4' },
-  { src: '/images/wu5.png', alt: '武墩墩5' },
-  { src: '/images/wu6.png', alt: '武墩墩6' }
+  { src: '/hezedemo/images/dan1.png', alt: '丹怼怼1' },
+  { src: '/hezedemo/images/dan2.png', alt: '丹怼怼2' },
+  { src: '/hezedemo/images/dan3.png', alt: '丹怼怼3' },
+  { src: '/hezedemo/images/dan4.png', alt: '丹怼怼4' },
+  { src: '/hezedemo/images/dan5.png', alt: '丹怼怼5' },
+  { src: '/hezedemo/images/dan6.png', alt: '丹怼怼6' },
+  { src: '/hezedemo/images/wu1.png', alt: '武墩墩1' },
+  { src: '/hezedemo/images/wu2.png', alt: '武墩墩2' },
+  { src: '/hezedemo/images/wu3.png', alt: '武墩墩3' },
+  { src: '/hezedemo/images/wu4.png', alt: '武墩墩4' },
+  { src: '/hezedemo/images/wu5.png', alt: '武墩墩5' },
+  { src: '/hezedemo/images/wu6.png', alt: '武墩墩6' }
 ]
 
 const totalSlides = slides.length
@@ -89,7 +157,7 @@ let intervalId = null
 
 const startAutoPlay = () => {
   if (!intervalId) {
-    intervalId = setInterval(nextSlide, 2000) // 每4秒切换
+    intervalId = setInterval(nextSlide, 2000) // 每2秒切换
   }
 }
 
@@ -109,57 +177,133 @@ onUnmounted(() => {
 })
 </script>
 
+
 <style scoped>
 .home-view {
-  padding: 2rem 0;
-  background-color: #f9f9f9;
+  background-color: var(--color-bg-light);
 }
 
+/* 英雄区域 */
 .hero {
+  background: linear-gradient(135deg, #d2691e 0%, #a0522d 100%);
+  color: white;
+  padding: 6rem 2rem;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1"/></svg>');
+  opacity: 0.3;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
   margin-bottom: 2rem;
-}
-
-.hero h1 {
-  color: #8b4513;
-  font-size: 1.8rem;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  margin: 1.5rem 0;
-  line-height: 1.6;
-  color: #555;
+  opacity: 0.9;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .browse-btn {
-  display: inline-block;
-  color: indianred;
-  text-decoration: none;
-  font-size: 1.4rem;
-  font-weight: bold;
   margin-top: 1rem;
+  font-size: 1.1rem;
+  padding: 0.75rem 2rem;
 }
 
-/* 轮播样式（同原版，略作整理） */
+/* 特色介绍 */
+.features-section {
+  padding: 4rem 2rem;
+  background: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--color-text);
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: var(--color-primary);
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feature-item {
+  text-align: center;
+  padding: 2rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.feature-item h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--color-text);
+}
+
+.feature-item p {
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
+/* 轮播样式 */
 .carousel-container {
-  width: min(95vw, 600px);
-  margin: 2rem auto;
+  width: min(95vw, 800px);
+  margin: 4rem auto;
   overflow: hidden;
   position: relative;
-  height: 400px;
-  border-radius: 12px;
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-}
-
-@media (max-width: 768px) {
-  .carousel-container {
-    height: 300px;
-    border-radius: 10px;
-  }
+  height: 500px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  background: white;
 }
 
 .carousel {
@@ -176,80 +320,191 @@ onUnmounted(() => {
   height: 100%;
   object-fit: contain;
   display: none;
+  transition: opacity 0.5s ease;
 }
 
 .carousel img.active {
   display: block;
+  opacity: 1;
 }
 
 .carousel-arrow {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  color: white;
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--color-primary);
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  font-size: 1.2rem;
   cursor: pointer;
   z-index: 10;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 .carousel-arrow:hover {
-  background: rgba(0, 0, 0, 0.8);
+  background: white;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-.left { left: 10px; }
-.right { right: 10px; }
+.left { left: 20px; }
+.right { right: 20px; }
 
 .carousel-dots {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
-  justify-content: center;
   gap: 10px;
-  margin-top: 12px;
 }
 
 .dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background-color: #ccc;
+  background-color: rgba(255, 255, 255, 0.6);
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .dot.active {
-  background-color: #d2691e;
+  background-color: var(--color-primary);
+  transform: scale(1.2);
 }
 
+/* 客户评价 */
+.testimonials-section {
+  padding: 4rem 2rem;
+  background: var(--color-bg-light);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.testimonial-item {
+  background: white;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-text {
+  font-style: italic;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.author-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.author-info h4 {
+  margin: 0;
+  color: var(--color-text);
+}
+
+.author-rating {
+  color: #ffc107;
+  font-size: 1rem;
+}
+
+/* 响应式设计 */
 @media (max-width: 768px) {
-  .carousel-container {
-    width: 85vw;
-    height: 320px;
+  .hero {
+    padding: 4rem 1rem;
   }
-  .left { left: 8px; }
-  .right { right: 8px; }
-  .carousel-arrow {
-    width: 32px;
-    height: 32px;
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
     font-size: 1rem;
   }
-  .carousel-dots {
-    gap: 6px;
+  
+  .features-section,
+  .testimonials-section {
+    padding: 2rem 1rem;
   }
-  .dot {
-    width: 8px;
-    height: 8px;
+  
+  .section-title {
+    font-size: 1.5rem;
   }
-  .hero h1 {
-    font-size: 1.4rem;
+  
+  .carousel-container {
+    width: 95vw;
+    height: 350px;
+  }
+  
+  .left { left: 10px; }
+  .right { right: 10px; }
+  
+  .carousel-arrow {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .features-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .testimonials-grid {
+    gap: 1.5rem;
+  }
+  
+  .feature-item,
+  .testimonial-item {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .carousel-container {
+    height: 280px;
+  }
+  
+  .browse-btn {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
   }
 }
 </style>

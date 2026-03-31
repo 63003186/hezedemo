@@ -2,7 +2,7 @@
   <div class="products-page">
     <div class="page-header">
       <h1>文创商品列表</h1>
-      <p>精选菏泽非遗好物，支持文化传承</p>
+      <p>精选菏泽非遗好物，支持文化传承 - 所有商品价格统一为59元</p>
     </div>
 
     <div class="products-grid">
